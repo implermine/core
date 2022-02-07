@@ -16,7 +16,7 @@ class ApplicationContextInfoTest {
         String[] beanDefinitionNames = ac.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {
             Object bean = ac.getBean(beanDefinitionName);
-            System.out.println("name=" + beanDefinitionName + " object=" + bean);
+            System.out.println("name=" + beanDefinitionName + "// object=" + bean);
         }
     }
 
@@ -31,7 +31,7 @@ class ApplicationContextInfoTest {
             // Role ROLE_INFRASTRUCTURE: 스프링이 내부에서 사용하는 빈
             if(beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION){
                 Object bean = ac.getBean(beanDefinitionName);
-                System.out.println("name=" + beanDefinitionName + " object=" + bean);
+                System.out.println("name=" + beanDefinitionName + "// object=" + bean);
             }
         }
     }
