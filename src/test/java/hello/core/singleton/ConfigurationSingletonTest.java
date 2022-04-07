@@ -23,6 +23,12 @@ public class ConfigurationSingletonTest {
         MemberServiceImpl memberServiceImpl = ac.getBean("memberService", MemberServiceImpl.class);
         OrderServiceImpl orderServiceImpl = ac.getBean("orderService", OrderServiceImpl.class);
         MemberRepository memberRepository = ac.getBean("memberRepository", MemberRepository.class);
+
+        //then
+        // 모두 같다.
+        System.out.println("memberServiceImpl.getMemberRepository() = " + memberServiceImpl.getMemberRepository());
+        System.out.println("orderServiceImpl.getMemberRepository() = " + orderServiceImpl.getMemberRepository());
+        System.out.println("memberRepository = " + memberRepository);
     }
 
     @Test
